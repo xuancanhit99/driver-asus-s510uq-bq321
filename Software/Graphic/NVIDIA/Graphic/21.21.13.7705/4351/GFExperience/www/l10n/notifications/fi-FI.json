@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "Uudet palkinnot",
+    "l10n.noNewRewards": "Ei uusia palkintoja",
+    "l10n.friendRequests": "Ystäväpyynnöt",
+    "l10n.newFriendRequests": "Uudet ystäväpyynnöt",
+    "l10n.noNewFriendRequests": "Ei uusia ystäväpyyntöjä",
+    "l10n.noNotifications": "Sinulla ei näytä vielä olevan ilmoituksia.",
+    "l10n.errorLoadingNotifications": "Ilmoituksia ei voitu ladata. Yritä myöhemmin uudelleen.",
+    "l10n.clickToRedeemWithGfe": "Napsauta lunastaaksesi GeForce Experiencella.",
+    "l10n.youHaveNewReward": "Lunastettavia kohteita on {{count}}",
+    "l10n.clickToInstallWithGfe": "Napsauta asentaaksesi GeForce Experiencella.",
+    "l10n.gameReadyDriverIsAvailable": "Pelausvalmis ohjain on saatavilla"
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nvi name="Ansel" title="${{title}}" version="377.05" versionText="377.05" timestamp="2017-03-06T02:30:03" disposition="default" hidden="true" installerMin="2.1002.161.1254" continueOnFailure="true">
+	<strings>
+		<string name="title" value="Ansel"/>
+	</strings>
+	<filter name="Win7" min="6.1" max="6.1"/>
+	<constraints>
+		<os min="6.1" level="silent" text="${{title}} requires Windows 7 or later."/>
+	</constraints>
+	<dependencies>
+		<package type="requires" package="Display.Driver"/>
+	</dependencies>
+	<extensions>
+	</extensions>
+	<properties>
+		<string name="InstallLocation" value="${{NvidiaProgramFiles}}\Ansel"/>
+	</properties>
+	<manifest>
+		<file name="NvCamera.nvi"/>
+		<file name="chunkyGrain.bmp"/>
+		<file name="filternames.cfg"/>
+		<file name="Retro.fx"/>
+		<file name="Retro.yaml"/>
+		<file name="BlacknWhite.fx"/>
+		<file name="BlacknWhite.yaml"/>
+		<file name="Halftone.fx"/>
+		<file name="Halftone.yaml"/>
+		<file name="Sepia.fx"/>
+		<file name="Sepia.yaml"/>
+		<file name="Adjustments.fx"/>
+		<file name="Adjustments.yaml"/>
+		<file name="SpecialFX.fx"/>
+		<file name="SpecialFX.yaml"/>
+		<file name="tools_licenses.txt"/>
+		<file name="HighresBlender32.exe"/>
+		<file name="HighresBlender64.exe"/>
+		<file name="NvCameraConfiguration.exe"/>
+		<file name="SphericalEquirect32.exe"/>
+		<file name="SphericalEquirect64.exe"/>
+		<file name="NvImageConvert32.exe"/>
+		<file name="NvImageConvert64.exe"/>
+		<file name="NvCameraEnable.exe"/>
+		<file name="ui.tga"/>
+		<file name="noise.tga"/>
+		<file name="NvCamera64.dll"/>
+		<file name="NvCamera32.dll"/>
+		<file name="d3dcompiler_47_32.dll"/>
+		<file name="d3dcompiler_47_64.dll"/>
+	</manifest>
+	<phases>
+		<standard phase="createDirectories">
+			<createDirectory target="${{InstallLocation}}"/>
+			<createDirectory target="${{InstallLocation}}\ShaderMod"/>
+			<createDirectory target="${{InstallLocation}}\Tools"/>
+		</standard>
+		<standard phase="copyNvcameraFiles">
+			<copyFile target="${{InstallLocation}}\ShaderMod\chunkyGrain.bmp" source="chunkyGrain.bmp"/>
+			<copyFile target="${{InstallLocation}}\ShaderMod\filternames.cfg" source="filternames.cfg"/>
+			<copyFile target="${{InstallLocation}}\ShaderMod\Retro.fx" source="Retro.fx"/>
+			<copyFile target="${{InstallLocation}}\ShaderMod\Retro.yaml" source="Retro.yaml"/>
+			<copyFile target="${{InstallLocation}}\ShaderMod\Halftone.fx" source="Halftone.fx"/>
+			<copyFile target="${{InstallLocation}}\ShaderMod\Halftone.yaml" source="Halftone.yaml"/>
+			<copyFile target="${{InstallLocation}}\ShaderMod\BlacknWhite.fx" source="BlacknWhite.fx"/>
+			<copyFile target="${{InstallLocation}}\ShaderMod\BlacknWhite.yaml" source="BlacknWhite.yaml"/>
+			<copyFile target="${{InstallLocation}}\ShaderMod\Sepia.fx" source="Sepia.fx"/>
+			<copyFile target="${{InstallLocation}}\ShaderMod\Sepia.yaml" source="Sepia.yaml"/>
+			<copyFile target="${{InstallLocation}}\ShaderMod\Adjustments.fx" source="Adjustments.fx"/>
+			<copyFile target="${{InstallLocation}}\ShaderMod\Adjustments.yaml" source="Adjustments.yaml"/>
+			<copyFile target="${{InstallLocation}}\ShaderMod\SpecialFX.fx" source="SpecialFX.fx"/>
+			<copyFile target="${{InstallLocation}}\ShaderMod\SpecialFX.yaml" source="SpecialFX.yaml"/>
+			<copyFile target="${{InstallLocation}}\ShaderMod\noise.tga" source="noise.tga"/>
+			<copyFile target="${{InstallLocation}}\Tools\tools_licenses.txt" source="tools_licenses.txt"/>
+			<copyFile target="${{InstallLocation}}\Tools\HighresBlender32.exe" source="HighresBlender32.exe"/>
+			<copyFile target="${{InstallLocation}}\Tools\NvCameraConfiguration.exe" source="NvCameraConfiguration.exe"/>
+			<copyFile target="${{InstallLocation}}\Tools\SphericalEquirect32.exe" source="SphericalEquirect32.exe"/>
+			<copyFile target="${{InstallLocation}}\Tools\NvImageConvert32.exe" source="NvImageConvert32.exe"/>
+			<copyFile target="${{InstallLocation}}\Tools\d3dcompiler_47_32.dll" source="d3dcompiler_47_32.dll"/>
+			<copyFile target="${{InstallLocation}}\Tools\NvCameraEnable.exe" source="NvCameraEnable.exe"/>
+			<copyFile target="${{InstallLocation}}\ui.tga" source="ui.tga"/>
+		</standard>
+		<standard phase="DeleteOlderNvCameraFiles" when="install">
+			<deleteFile target="${{InstallLocation}}\ShaderMod\custom.fx"/>
+			<deleteFile target="${{InstallLocation}}\ShaderMod\custom.yaml"/>
+			<deleteFile target="${{InstallLocation}}\ShaderMod\Sketch.fx"/>
+			<deleteFile target="${{InstallLocation}}\ShaderMod\Sketch.yaml"/>
+			<deleteFile target="${{InstallLocation}}\ShaderMod\Warm.fx"/>
+			<deleteFile target="${{InstallLocation}}\ShaderMod\Warm.yaml"/>
+			<deleteFile target="${{InstallLocation}}\ShaderMod\vignette.tga"/>
+			<deleteFile target="${{InstallLocation}}\Tools\TagTool32.exe"/>
+		</standard>
+		<standard phase="DeleteNvCameraDll64bit" platform="amd64" when="install">
+			<deleteFile target="${{SystemDirectory}}\NvCamera64.dll"/>
+			<deleteFile target="${{SharedWindowsDirectory}}\SysWOW64\NvCamera32.dll"/>
+		</standard>
+		<standard phase="DeleteNvCameraDll32bit" platform="x86" when="install">
+			<deleteFile target="${{SystemDirectory}}\NvCamera32.dll"/>
+		</standard>
+		<standard phase="copyNvcameraFiles64bit" platform="amd64">
+			<copyFile target="${{InstallLocation}}\Tools\HighresBlender64.exe" source="HighresBlender64.exe"/>
+			<copyFile target="${{InstallLocation}}\Tools\SphericalEquirect64.exe" source="SphericalEquirect64.exe"/>
+			<copyFile target="${{InstallLocation}}\Tools\NvImageConvert64.exe" source="NvImageConvert64.exe"/>
+			<copyFile target="${{InstallLocation}}\Tools\d3dcompiler_47_64.dll" source="d3dcompiler_47_64.dll"/>
+			<copyFile target="${{InstallLocation}}\Tools\NvCamera64.dll" source="NvCamera64.dll"/>
+			<copyFile target="${{InstallLocation}}\Tools\NvCamera32.dll" source="NvCamera32.dll"/>
+		</standard>
+		<standard phase="copyNvcameraFiles32bit" platform="x86">
+			<copyFile target="${{InstallLocation}}\Tools\NvCamera32.dll" source="NvCamera32.dll"/>
+		</standard>
+		<standard phase="createInstalldirKey">
+			<addRegistry keyName="${{NvidiaPerUserSoftwareKey}}\NvCamera"/>
+			<addRegistry keyName="${{NvidiaPerUserSoftwareKey}}\NvCamera" valueName="Installdir" value="${{InstallLocation}}\" valueType="REG_SZ"/>
+		</standard>
+		<exe phase="enableNvCamara" when="install" name="NvCameraEnable.exe" condition="!Global:RebootRequired">
+			<arg value="on"/>
+		</exe>
+		<standard phase="enableNvCameraPostReboot" when="install" condition="Global:RebootRequired">
+			<addRegistry keyName="HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce" valueName="NvCameraEnable" type="REG_SZ" value="&quot;${{InstallLocation}}\Tools\NvCameraEnable.exe&quot; on"/>
+		</standard>
+		<exe phase="disableNvCamara" when="uninstall" name="${{InstallLocation}}\Tools\NvCameraEnable.exe">
+			<arg value="off"/>
+		</exe>
+	</phases>
+</nvi>

@@ -1,0 +1,45 @@
+<migration urlid="http://www.microsoft.com/migration/asus">
+	<component type="System">
+		<displayName>Registry Migration</displayName>
+		<role role="Settings">
+			<rules context="UserAndSystem">
+				<include>
+					<objectSet>
+						<!-- Example: include -->
+						<pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Store\ [*]</pattern> <!-- Store ID -->
+						<pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform\PayloadOverride\SKUID\* [*]</pattern> <!-- Office ID -->
+						<pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\TBDEn\ [*]</pattern> <!-- Taskbar -->
+						<pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\HIDSwitch\Parameters\ [*]</pattern> <!-- Wireless Radio Control -->
+						<pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power\ [HiberbootEnabled]</pattern> <!-- T100HAN Customized -->	
+						<pattern type="Registry">HKLM\SOFTWARE\Classes\Directory\background\shellex\ContextMenuHandlers\ACE\ [*]</pattern> <!-- AMD Control Center -->
+						<pattern type="Registry">HKLM\Software\microsoft\Windows\CurrentVersion\Setup\OOBE\ [SetupDisplayedProductKey]</pattern> <!-- Fix NAO -->
+						<pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\ClipSVC\Parameters\ [ProcessBiosKey]</pattern> <!-- Fix NAO -->
+					</objectSet> 
+				</include>
+				<exclude>
+					<objectSet>
+						<!-- Example: exclude -->
+					</objectSet>
+				</exclude>
+			</rules>
+		</role>
+	</component>
+	<component type="Documents" context="System">
+		<displayName>File Migration</displayName>
+		<role role="Data">
+			<rules>
+				<include>
+					<objectSet>
+						<!-- Example: include -->
+					</objectSet>
+				</include>
+				<exclude>
+					<objectSet>
+						<!-- Example: exclude -->
+						<pattern type="File">C:\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\ [*]</pattern> <!-- Font Cache -->
+					</objectSet>
+				</exclude>
+			</rules>
+		</role>
+	</component>
+</migration>

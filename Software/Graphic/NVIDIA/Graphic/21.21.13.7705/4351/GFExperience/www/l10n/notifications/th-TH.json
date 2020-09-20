@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "รางวัลใหม่",
+    "l10n.noNewRewards": "ไม่มีรางวัลใหม่",
+    "l10n.friendRequests": "คำร้องขอเป็นเพื่อน",
+    "l10n.newFriendRequests": "คำร้องขอเป็นเพื่อนใหม่",
+    "l10n.noNewFriendRequests": "ไม่มีคำร้องขอเป็นเพื่อนใหม่",
+    "l10n.noNotifications": "ดูเหมือนว่าคุณยังไม่มีการแจ้งเตือน",
+    "l10n.errorLoadingNotifications": "มีข้อผิดพลาดในการโหลดการแจ้งเตือน ลองใหม่อีกครั้งในภายหลัง",
+    "l10n.clickToRedeemWithGfe": "คลิกเพื่อแลกรางวัลกับ GeForce Experience",
+    "l10n.youHaveNewReward": "คุณมีรายการใหม่ {{count}} รายการสำหรับการแลกรางวัล",
+    "l10n.clickToInstallWithGfe": "คลิกเพื่อติดตั้งกับ GeForce Experience",
+    "l10n.gameReadyDriverIsAvailable": "ไดรฟ์เวอร์ Game Ready พร้อมใช้งาน"
+}

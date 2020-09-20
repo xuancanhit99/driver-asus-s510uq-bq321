@@ -1,0 +1,3 @@
+Vendor:Alcor
+Category:Cardreader
+Module:AU6465R

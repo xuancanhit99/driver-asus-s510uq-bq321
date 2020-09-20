@@ -1,0 +1,3 @@
+Vendor:Conexant
+Category:Audio
+Module:CX20672

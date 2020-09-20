@@ -1,0 +1,1 @@
+Setup.exe /s -f2c:\windows\temp\ELAN_Fingerprint_setup.log /runfromtemp 

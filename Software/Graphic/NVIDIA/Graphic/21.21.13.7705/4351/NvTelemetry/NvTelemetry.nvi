@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nvi name="NvTelemetry" title="${{title}}" version="2.3.16.0" versionText="2.3.16.0" timestamp="2017-02-21T07:04:45" disposition="demand" hidden="true" installerMin="2.1002.215.1898">
+	<dependencies>
+		<package type="requires" package="NvTelemetryContainer"/>
+		<package type="uninstalls" package="NvTelemetryContainer" when="uninstall"/>
+	</dependencies>
+	<extensions>
+		<extension file="NvTelemetryExt.dll"/>
+	</extensions>
+	<constraints>
+		<custom name="CheckIfNotAnUpgrade" level="silent"/>
+	</constraints>
+	<manifest>
+		<file name="NvTelemetry.nvi"/>
+		<file name="NvTelemetryExt.dll"/>
+		<file name="NvTelemetry.dll"/>
+		<file name="NvTelemetryBridge32.dll"/>
+		<file name="NvTelemetryBridge64.dll"/>
+		<file name="NvTelemetryAPI32.dll"/>
+		<file name="NvTelemetryAPI64.dll"/>
+	</manifest>
+	<strings>
+		<string name="title" value="NvTelemetry"/>
+		<string name="ContainerService" value="NvTelemetryContainer"/>
+		<string name="serviceStopMaxTimeout" value="30000"/>
+		<string name="ContainerBinaryName" value="NvTelemetryContainer.exe"/>
+	</strings>
+	<properties>
+		<bool name="ContainerUnloaded" value="true"/>
+	</properties>
+	<phases>
+		<standard phase="stopContainerService" onError="ignore" when="install">
+			<stopService name="${{ContainerService}}" timeOut="${{serviceStopMaxTimeout}}"/>
+		</standard>
+		<exe phase="killContainer" name="${{SystemDirectory}}\taskkill.exe" when="install" onError="ignore">
+			<arg value="/f /im ${{ContainerBinaryName}}" quote="none"/>
+		</exe>
+		<setPropertyIf phase="checkIfContainerUnloaded" boolProperty="ContainerUnloaded" value="false" when="install">
+			<process name="${{ContainerBinaryName}}" check="exists"/>
+		</setPropertyIf>
+		<confirm phase="Confirm-ContainerUnload" when="install">
+			<propertyTrue name="ContainerUnloaded"/>
+		</confirm>
+		<custom phase="moveOldAPI32" action="moveFile" when="install">
+			<properties>
+				<string name="from" value="${{NvidiaProgramFilesX86}}\NvTelemetry\NvTelemetryAPI32.dll"/>
+				<string name="to" value="${{LocalUserAppData}}\temp\NvTelemetryAPI32.dll.2.3.16.0"/>
+			</properties>
+		</custom>
+		<custom phase="moveOldAPI64" action="moveFile" when="install">
+			<properties>
+				<string name="from" value="${{NvidiaProgramFiles}}\NvTelemetry\NvTelemetryAPI64.dll"/>
+				<string name="to" value="${{LocalUserAppData}}\temp\NvTelemetryAPI64.dll.2.3.16.0"/>
+			</properties>
+		</custom>
+		<custom phase="moveOldDLL" action="moveFile" when="install">
+			<properties>
+				<string name="from" value="${{NvidiaProgramFilesX86}}\NvContainer\plugins\User\NvTelemetry.dll"/>
+				<string name="to" value="${{LocalUserAppData}}\temp\NvTelemetry.dll.2.3.16.0"/>
+			</properties>
+		</custom>
+		<standard phase="createAppFolder">
+			<createDirectory target="${{CommonAppData}}\NVIDIA Corporation\NvTelemetry"/>
+		</standard>
+		<custom phase="moveDBFile" action="moveFile" when="install" onError="ignore">
+			<properties>
+				<string name="from" value="${{LocalUserAppData}}\NVIDIA Corporation\NvTelemetry\events.dat"/>
+				<string name="to" value="${{CommonAppData}}\NVIDIA Corporation\NvTelemetry\events.dat"/>
+			</properties>
+		</custom>
+		<custom phase="moveDBFile2" action="moveFile" when="install" onError="ignore">
+			<properties>
+				<string name="from" value="${{LocalUserAppData}}\NVIDIA Corporation\NvTelemetry\events.dat-shm"/>
+				<string name="to" value="${{CommonAppData}}\NVIDIA Corporation\NvTelemetry\events.dat-shm"/>
+			</properties>
+		</custom>
+		<custom phase="moveDBFile3" action="moveFile" when="install" onError="ignore">
+			<properties>
+				<string name="from" value="${{LocalUserAppData}}\NVIDIA Corporation\NvTelemetry\events.dat-wal"/>
+				<string name="to" value="${{CommonAppData}}\NVIDIA Corporation\NvTelemetry\events.dat-wal"/>
+			</properties>
+		</custom>
+		<custom phase="setACLOnDBFile" action="setACL" when="install" onError="ignore">
+			<properties>
+				<string name="path" value="${{CommonAppData}}\NVIDIA Corporation\NvTelemetry\events.dat"/>
+				<string name="dacl" value="D:(A;NP;FA;;;NS)"/>
+			</properties>
+		</custom>
+		<custom phase="setACLOnDBFile2" action="setACL" when="install" onError="ignore">
+			<properties>
+				<string name="path" value="${{CommonAppData}}\NVIDIA Corporation\NvTelemetry\events.dat-shm"/>
+				<string name="dacl" value="D:(A;NP;FA;;;NS)"/>
+			</properties>
+		</custom>
+		<custom phase="setACLOnDBFile3" action="setACL" when="install" onError="ignore">
+			<properties>
+				<string name="path" value="${{CommonAppData}}\NVIDIA Corporation\NvTelemetry\events.dat-wal"/>
+				<string name="dacl" value="D:(A;NP;FA;;;NS)"/>
+			</properties>
+		</custom>
+		<standard phase="removeOldFolder" when="install" onError="ignore">
+			<deleteDirectoryTree target="${{LocalUserAppData}}\NVIDIA Corporation\NvTelemetry"/>
+		</standard>
+		<standard phase="copyBinaries">
+			<createDirectory target="${{NvidiaProgramFilesX86}}\NvTelemetry"/>
+			<createDirectory target="${{NvidiaProgramFilesX86}}\NvTelemetry\plugin"/>
+			<copyFile source="NvTelemetry.dll" target="${{NvidiaProgramFilesX86}}\NvTelemetry\plugin\NvTelemetry.dll"/>
+			<copyFile source="NvTelemetryBridge32.dll" target="${{NvidiaProgramFilesX86}}\NvTelemetry\NvTelemetryBridge32.dll"/>
+			<copyFile source="NvTelemetryAPI32.dll" target="${{NvidiaProgramFilesX86}}\NvTelemetry\NvTelemetryAPI32.dll"/>
+		</standard>
+		<standard phase="copyx64Binaries" platform="amd64">
+			<createDirectory target="${{NvidiaProgramFiles}}\NvTelemetry"/>
+			<copyFile source="NvTelemetryBridge64.dll" target="${{NvidiaProgramFiles}}\NvTelemetry\NvTelemetryBridge64.dll"/>
+			<copyFile source="NvTelemetryAPI64.dll" target="${{NvidiaProgramFiles}}\NvTelemetry\NvTelemetryAPI64.dll"/>
+		</standard>
+		<exe phase="killContainer" name="${{SystemDirectory}}\taskkill.exe" when="uninstall" onError="ignore">
+			<arg value="/f /im ${{ContainerBinaryName}}" quote="none"/>
+		</exe>
+		<standard phase="stopContainerService" when="uninstall" onError="ignore">
+			<stopService name="${{ContainerService}}" timeOut="${{serviceStopMaxTimeout}}"/>
+		</standard>
+		<standard phase="deleteFiles" when="uninstall" onError="ignore">
+			<deleteDirectoryTree target="${{NvidiaProgramFilesX86}}\NvTelemetry"/>
+			<deleteDirectoryTree target="${{NvidiaProgramFiles}}\NvTelemetry"/>
+			<deleteDirectoryTree target="${{CommonAppData}}\NVIDIA Corporation\NvTelemetry"/>
+		</standard>
+	</phases>
+</nvi>

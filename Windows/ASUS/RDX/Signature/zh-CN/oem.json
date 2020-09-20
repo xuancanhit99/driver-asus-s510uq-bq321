@@ -1,0 +1,46 @@
+{
+"identifier":"oem",
+"logo":"oem_assets/logo.png",
+"themeColor":"#222D5A",
+"pages":[
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"First Page",
+"textSide":"left",
+"header":"精致的机身外观与多彩颜色选择",
+"text1":"X系列笔记本电脑专为日常多任务和娱乐功能而生，提供可靠舒适的使用体验和高耐用性， 时尚典雅的外形设计，更是迎合了时尚人群的独特气质。",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-2.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"Second Page",
+"textSide":"left",
+"header":"华硕酷凉技术",
+"text1":"华硕酷凉技术始终保持掌托处表面温度处于人体舒适温度，给用户一个舒适的使用体验",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-3.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"Third Page",
+"textSide":"left",
+"header":"华硕美声大师技术",
+"text1":"由华硕金耳朵团队研发，华硕美声大师技术清晰和强大的声音，与丰富的低音和清脆的歌声 华硕的精制硬件带来超大扬声器和共鸣舱，而软件优化功能则有助于实现令人惊艳的音效",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-4.png"
+}
+}
+]
+}

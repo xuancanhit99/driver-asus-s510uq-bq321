@@ -1,0 +1,3 @@
+Vendor:ELAN
+Category:Fingerprint
+Module:EFSA96SA-H700Z(FA473A-3200)

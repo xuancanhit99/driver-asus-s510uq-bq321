@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nvi name="NvContainer.Session" title="${{title}}" version="${{version}}" versionText="${{version}}" timestamp="${{timestamp}}" disposition="demand" hidden="true" installerMin="2.1002.234.2014">
+	<strings>
+		<string name="title" value="NVIDIA Session Container"/>
+		<string name="version" value="1.2"/>
+		<string name="timestamp" value="2017-01-19T16:02:49"/>
+		<string name="InstallFolderName" value="${{NvidiaProgramFiles}}\NvContainer"/>
+		<string name="InstallFolderNameX86" value="${{NvidiaProgramFilesX86}}\NvContainer"/>
+		<string name="ContainerPath" value="${{InstallFolderName}}\nvcontainer.exe"/>
+		<string name="ContainerPathX86" value="${{InstallFolderNameX86}}\nvcontainer.exe"/>
+		<string name="PluginFolderName" value="${{InstallFolderName}}\plugins\Session"/>
+		<string name="PluginFolderNameX86" value="${{InstallFolderNameX86}}\plugins\Session"/>
+		<string name="LogBaseFilePath" value="${{NvidiaCommonAppData}}\NvContainerSession"/>
+		<string name="LogLevel" value="3"/>
+		<string name="WatchdogRegistryKey" value="${{NvidiaSoftwareKey}}\NvContainer\Watchdog"/>
+		<string name="LogFileWaitForUnlockPeriod" value="5000"/>
+		<string name="RestartPolicy" value="10/300/5"/>
+		<string name="StateTransitionMaxTime" value="30000"/>
+	</strings>
+	<filter name="64bit" platform="amd64"/>
+	<dependencies>
+		<package type="requires" package="NvContainer"/>
+		<package type="requires" package="NvPlugin.Watchdog"/>
+	</dependencies>
+	<manifest>
+		<file name="NvContainerSession.nvi"/>
+	</manifest>
+	<phases>
+		<standard phase="deleteDeperecatedUserElevated" onError="ignore" when="install">
+			<deleteDirectoryTree target="${{InstallFolderName}}\plugins\UserElevated"/>
+			<deleteDirectoryTree target="${{InstallFolderNameX86}}\plugins\UserElevated"/>
+			<deleteRegistryKeyTree keyName="${{WatchdogRegistryKey}}\UserElevatedX86"/>
+			<deleteRegistryKeyTree keyName="${{WatchdogRegistryKey}}\UserElevatedX64"/>
+		</standard>
+		<standard phase="createDirectories">
+			<createDirectory target="${{PluginFolderName}}"/>
+		</standard>
+		<standard phase="deleteInstalledFiles" onError="ignore" when="uninstall">
+			<deleteDirectoryTree target="${{PluginFolderName}}"/>
+		</standard>
+		<standard phase="deleteAppData" onError="ignore" when="uninstall">
+			<deleteFile target="${{LogBaseFilePath}}*.log*" waitForUnlock="${{LogFileWaitForUnlockPeriod}}"/>
+		</standard>
+		<standard phase="createRegkeyX86">
+			<addRegistry keyName="${{WatchdogRegistryKey}}\SessionX86" valueName="" value="Session Plugins (x86)" type="REG_SZ"/>
+			<addRegistry keyName="${{WatchdogRegistryKey}}\SessionX86" valueName="Folder" value="${{PluginFolderNameX86}}" type="REG_SZ"/>
+			<addRegistry keyName="${{WatchdogRegistryKey}}\SessionX86" valueName="Container" value="${{ContainerPathX86}}" type="REG_SZ"/>
+			<addRegistry keyName="${{WatchdogRegistryKey}}\SessionX86" valueName="Parameters" value="-f &quot;${{LogBaseFilePath}}%d.log&quot; -d &quot;${{PluginFolderNameX86}}&quot; -r -l ${{LogLevel}} -p ${{StateTransitionMaxTime}}" type="REG_SZ"/>
+			<addRegistry keyName="${{WatchdogRegistryKey}}\SessionX86" valueName="RunElevated" value="1" type="REG_DWORD"/>
+			<addRegistry keyName="${{WatchdogRegistryKey}}\SessionX86" valueName="Policy" value="${{RestartPolicy}}" type="REG_SZ"/>
+		</standard>
+		<if filter="64bit">
+			<standard phase="createRegkeyAMD64">
+				<addRegistry keyName="${{WatchdogRegistryKey}}\SessionX64" valueName="" value="Session Plugins (x64)" type="REG_SZ"/>
+				<addRegistry keyName="${{WatchdogRegistryKey}}\SessionX64" valueName="Folder" value="${{PluginFolderName}}" type="REG_SZ"/>
+				<addRegistry keyName="${{WatchdogRegistryKey}}\SessionX64" valueName="Container" value="${{ContainerPath}}" type="REG_SZ"/>
+				<addRegistry keyName="${{WatchdogRegistryKey}}\SessionX64" valueName="Parameters" value="-f &quot;${{LogBaseFilePath}}%d.log&quot; -d &quot;${{PluginFolderName}}&quot; -r -l ${{LogLevel}} -p ${{StateTransitionMaxTime}}" type="REG_SZ"/>
+				<addRegistry keyName="${{WatchdogRegistryKey}}\SessionX64" valueName="RunElevated" value="1" type="REG_DWORD"/>
+				<addRegistry keyName="${{WatchdogRegistryKey}}\SessionX64" valueName="Policy" value="${{RestartPolicy}}" type="REG_SZ"/>
+			</standard>
+		</if>
+	</phases>
+</nvi>

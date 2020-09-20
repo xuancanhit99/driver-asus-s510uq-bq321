@@ -1,0 +1,4 @@
+OneDrive.exe
+igfxTray.exe
+igfxEM.exe
+igfxHK.exe

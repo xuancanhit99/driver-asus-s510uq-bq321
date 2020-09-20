@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "Nove nagrade",
+    "l10n.noNewRewards": "Nobenih novih nagrad",
+    "l10n.friendRequests": "Zahteve za prijateljstvo",
+    "l10n.newFriendRequests": "Nove zahteve za prijateljstvo",
+    "l10n.noNewFriendRequests": "Nobenih novih zahtev za prijateljstvo",
+    "l10n.noNotifications": "Videti je, da še nimate nobenih obvestil",
+    "l10n.errorLoadingNotifications": "Pri nalaganju obvestil je prišlo do napake. Poskusite še enkrat kasneje",
+    "l10n.clickToRedeemWithGfe": "Kliknite, da prevzamete z GeForce Experience.",
+    "l10n.youHaveNewReward": "Imate {{count}} nova/e/ih artikla/e/ov za prevzem",
+    "l10n.clickToInstallWithGfe": "Kliknite, da namestite z GeForce Experience.",
+    "l10n.gameReadyDriverIsAvailable": "Gonilnik, pripravljen za igro, je na voljo"
+}

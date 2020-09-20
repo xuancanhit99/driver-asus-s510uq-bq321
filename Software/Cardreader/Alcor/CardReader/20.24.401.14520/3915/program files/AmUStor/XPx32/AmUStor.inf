@@ -1,0 +1,153 @@
+;----------------------------------------------------------------------------
+;   AM USB Storage Driver
+;----------------------------------------------------------------------------
+[Version]
+Signature="$WINDOWS NT$"
+Class=USB
+ClassGUID={36FC9E60-C465-11CF-8056-444553540000}
+Provider=%VENDOR%
+DriverVer=04/11/2016,1.0.145.40103
+CatalogFile=AmUStor.cat
+;----------------------------------------------------------------------------
+;   Manufacturer and Product Information
+;----------------------------------------------------------------------------
+[ControlFlags]
+ExcludeFromSelect = *
+
+[Manufacturer]
+%MfgName%=DeviceList,NTx86
+
+[DeviceList.NTx86]
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6332
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6335
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6361
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6362
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6363&MI_00
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6364&MI_00
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6466&MI_00
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6366
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6369
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6377
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6465
+
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6462
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6464&MI_00
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6477&MI_00
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6478
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6458&MI_00
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6459
+
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6339
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6381
+%USB\VID_058F&PID_6369.DeviceDesc%=AmUStor, USB\VID_058F&PID_6385
+
+%USB\VID_058F&PID_8XXX.DeviceDesc%=AmUStor, USB\VID_058F&PID_8434&MI_00
+%USB\VID_058F&PID_8XXX.DeviceDesc%=AmUStor, USB\VID_058F&PID_8431
+%USB\VID_058F&PID_8XXX.DeviceDesc%=AmUStor, USB\VID_058F&PID_8432
+
+%USB\VID_058F&PID_8XXX.DeviceDesc%=AmUStor, USB\VID_058F&PID_8461
+%USB\VID_058F&PID_8XXX.DeviceDesc%=AmUStor, USB\VID_058F&PID_8462
+%USB\VID_058F&PID_8XXX.DeviceDesc%=AmUStor, USB\VID_058F&PID_8463
+%USB\VID_058F&PID_8XXX.DeviceDesc%=AmUStor, USB\VID_058F&PID_8464
+%USB\VID_058F&PID_8XXX.DeviceDesc%=AmUStor, USB\VID_058F&PID_8465
+%USB\VID_058F&PID_8XXX.DeviceDesc%=AmUStor, USB\VID_058F&PID_8466
+%USB\VID_058F&PID_8XXX.DeviceDesc%=AmUStor, USB\VID_058F&PID_8467
+%USB\VID_058F&PID_8XXX.DeviceDesc%=AmUStor, USB\VID_058F&PID_8468
+
+%USB\VID_058F&PID_8XXX.DeviceDesc%=AmUStor, USB\VID_058F&PID_8469
+%USB\VID_058F&PID_8XXX.DeviceDesc%=AmUStor, USB\VID_058F&PID_846A
+%USB\VID_058F&PID_8XXX.DeviceDesc%=AmUStor, USB\VID_058F&PID_846B
+%USB\VID_058F&PID_8XXX.DeviceDesc%=AmUStor, USB\VID_058F&PID_846C
+%USB\VID_058F&PID_8XXX.DeviceDesc%=AmUStor, USB\VID_058F&PID_846D
+
+;----------------------------------------------------------------------------
+;   CopyFile Sections
+;----------------------------------------------------------------------------
+; Windows NT Copy List Section
+[SourceDisksNames]
+1="Generic USB Mass Storage Driver"
+
+[DestinationDirs]
+AmUStor.CopyList = 10, system32\drivers
+CoInstallCopyFile = 11
+IconCopyFilesSection = 11
+
+[SourceDisksFiles]
+AmUStor.sys=1
+AmUStor2.dll=1
+AmRdrIco.icl=1
+AmUStor.ini=1
+CardDetect6339.bin=1
+CardDetect6361.bin=1
+CardDetect6362.bin=1
+CardDetect6366.bin=1
+CardDetect6420.bin=1
+CardDetect6485.bin=1
+VendorCmd6435.bin=1
+VendorCmd6465.bin=1
+VendorCmd6485.bin=1
+VendorCmd6485_SetSSC.bin=1
+VendorCommand_MS1bit.bin=1
+
+[AmUStor.NTx86]
+CopyFiles=AmUStor.CopyList
+AddReg=AmUStor.AddReg
+
+[AmUStor.CopyList]
+AmUStor.sys
+
+[AmUStor.AddReg]
+HKLM,System\CurrentControlSet\Control\DeviceOverrides\USB#VID_058F&PID_6339\LocationPaths\*,Removable,0x10001,0
+HKLM,System\CurrentControlSet\Control\DeviceOverrides\USB#VID_058F&PID_6361\LocationPaths\*,Removable,0x10001,0
+HKLM,System\CurrentControlSet\Control\DeviceOverrides\USB#VID_058F&PID_6362\LocationPaths\*,Removable,0x10001,0
+HKLM,System\CurrentControlSet\Control\DeviceOverrides\USB#VID_058F&PID_6366\LocationPaths\*,Removable,0x10001,0
+
+[IconCopyFilesSection]
+AmRdrIco.icl
+AmUStor.ini
+CardDetect6339.bin
+CardDetect6361.bin
+CardDetect6362.bin
+CardDetect6366.bin
+CardDetect6420.bin
+CardDetect6485.bin
+VendorCmd6485_SetSSC.bin
+VendorCmd6435.bin
+VendorCmd6465.bin
+VendorCmd6485.bin
+VendorCommand_MS1bit.bin
+
+;----------------------------------------------------------------------------
+[AmUStor.NTx86.CoInstallers]
+CopyFiles = CoInstallCopyFile, IconCopyFilesSection
+AddReg = CoInstallersAddReg
+
+
+[CoInstallCopyFile]
+AmUStor2.dll
+
+[CoInstallersAddReg]
+HKR,,CoInstallers32,0x00010000,"AmUStor2.dll,CoInstallerProc"
+
+;----------------------------------------------------------------------------
+;   Windows 2000/XP Sections
+;----------------------------------------------------------------------------
+[AmUStor.NTx86.Services]
+Addservice = AmUStor, 0x00000002, AmUStorService
+
+[AmUStorService]
+DisplayName    = %AmUStor.SvcDesc%
+ServiceType    = 1
+StartType      = 3
+ErrorControl   = 1
+ServiceBinary  = %10%\system32\drivers\AmUStor.SYS
+
+;----------------------------------------------------------------------------
+;   String Definitions
+;----------------------------------------------------------------------------
+[Strings]
+VENDOR="Alcor Micro, Corp."
+MfgName="Alcor Micro, Corp."
+AmUStor.SvcDesc = "AM USB Stroage Driver"
+USB\VID_058F&PID_6369.DeviceDesc = "Alcor Micro USB 2.0 Card Reader"
+USB\VID_058F&PID_8XXX.DeviceDesc = "Alcor Micro USB 3.0 Card Reader"

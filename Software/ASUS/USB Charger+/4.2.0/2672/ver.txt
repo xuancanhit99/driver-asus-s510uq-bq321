@@ -1,0 +1,2 @@
+ProductName = ASUS USB Charger Plus
+ProductVersion = 4.2.0

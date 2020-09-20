@@ -1,0 +1,46 @@
+{
+"identifier":"oem",
+"logo":"oem_assets/logo.png",
+"themeColor":"#222D5A",
+"pages":[
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"First Page",
+"textSide":"left",
+"header":"Elegantes patrones en múltiples colores.",
+"text1":"Todas las funciones necesarias con un acabado de calidad muy agradable al tacto. Portátil con estilo para aquellos que no se conforman.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-2.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"Second Page",
+"textSide":"left",
+"header":"Tecnología IceCool",
+"text1":"ASUS IceCool mantiene el reposamuñecas por debajo de la temperatura corporal para una escritura más cómoda.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-3.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"Third Page",
+"textSide":"left",
+"header":"Tecnología SonicMaster",
+"text1":"Diseñada por el equipo ASUS Golden Ear, ofrece un sonido claro y potente. El amplificador optimizado entrega más volumen y graves.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-4.png"
+}
+}
+]
+}

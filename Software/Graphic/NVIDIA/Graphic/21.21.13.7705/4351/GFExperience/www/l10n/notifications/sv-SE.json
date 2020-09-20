@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "Nya belöningar",
+    "l10n.noNewRewards": "Inga nya belöningar",
+    "l10n.friendRequests": "Vänförfrågningar",
+    "l10n.newFriendRequests": "Nya vänförfrågningar",
+    "l10n.noNewFriendRequests": "Inga nya vänförfrågningar",
+    "l10n.noNotifications": "Det ser ut som du inte har några meddelanden ännu.",
+    "l10n.errorLoadingNotifications": "Ett fel uppstod vid uppladdning av meddelanden. Försök igen senare.",
+    "l10n.clickToRedeemWithGfe": "Klicka för att uppleva GeForce Experience.",
+    "l10n.youHaveNewReward": "Du har nya {{count}} saker att hämta",
+    "l10n.clickToInstallWithGfe": "Klicka för att installera med GeForce Experience.",
+    "l10n.gameReadyDriverIsAvailable": "Game Ready-drivrutin är tillgänglig"
+}

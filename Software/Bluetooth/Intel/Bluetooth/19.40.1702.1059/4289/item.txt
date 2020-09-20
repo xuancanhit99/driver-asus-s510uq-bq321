@@ -1,0 +1,3 @@
+Vendor:Intel
+Category:Bluetooth
+Module:7265

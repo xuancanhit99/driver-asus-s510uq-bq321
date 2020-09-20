@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Reset>
+<Run Phase="BasicReset_AfterImageApply">
+<Path>Refresh.cmd</Path>
+<Param></Param>
+<Duration>10</Duration>
+</Run>
+<Run Phase="FactoryReset_AfterImageApply">
+<Path>Reset.cmd</Path>
+<Param></Param>
+<Duration>10</Duration>
+</Run>
+</Reset>

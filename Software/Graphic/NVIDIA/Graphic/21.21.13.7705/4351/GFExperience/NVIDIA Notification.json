@@ -1,0 +1,8 @@
+{"switches": [
+    "nv-notification-app",
+    "nv-def-window-size=480,100",
+    "nv-def-window-margin=10,10",
+    "nv-no-windows-borders",
+    "nv-url-relative=www/desktop-notification-app.html"
+  ]
+}

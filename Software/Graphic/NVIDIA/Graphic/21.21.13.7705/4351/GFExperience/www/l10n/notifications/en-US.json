@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "New Rewards",
+    "l10n.noNewRewards": "No New Rewards",
+    "l10n.friendRequests": "Friend Requests",
+    "l10n.newFriendRequests": "New Friend Requests",
+    "l10n.noNewFriendRequests": "No New Friend Requests",
+    "l10n.noNotifications": "Looks like you don't have any notifications yet",
+    "l10n.errorLoadingNotifications": "There was an error loading notifications. Try again later",
+    "l10n.clickToRedeemWithGfe": "Click to redeem with GeForce Experience.",
+    "l10n.youHaveNewReward": "You have {{count}} new items to redeem",
+    "l10n.clickToInstallWithGfe": "Click to install with GeForce Experience.",
+    "l10n.gameReadyDriverIsAvailable": "Game Ready Driver is available"
+}

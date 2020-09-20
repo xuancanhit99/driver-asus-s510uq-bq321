@@ -1,0 +1,3 @@
+Vendor:ASUS
+Category:Touchpad
+Module:ELAN/SA473I-12A4

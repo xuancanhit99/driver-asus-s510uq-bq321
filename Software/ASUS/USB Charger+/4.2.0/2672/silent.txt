@@ -1,0 +1,11 @@
+# silent install and restart computer
+
+setup.exe /qn
+
+# silent install but no restart
+
+setup.exe /qn /norestart
+
+# silent uninstall without restarting
+
+msiexec /qn /norestart /uninstall {A859E3E5-C62F-4BFA-AF1D-2B95E03166AF}

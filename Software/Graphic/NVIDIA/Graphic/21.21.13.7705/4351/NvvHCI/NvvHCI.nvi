@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nvi name="NvvHci" title="${{title}}" version="2.02.0.5" versionText="2.02.0.5" timestamp="2017-02-23T08:31:17" disposition="default" hidden="true" installerMin="2.1002.161.1254" continueOnFailure="true">
+	<strings>
+		<string name="title" value="NvvHci"/>
+	</strings>
+	<dependencies>
+		<package type="requires" package="GFExperience.NvStreamSrv"/>
+	</dependencies>
+	<filter name="Win7" min="6.1" max="6.1"/>
+	<constraints>
+		<os min="6.1" level="silent" text="${{title}} requires Windows 7 or later."/>
+	</constraints>
+	<properties>
+		<string name="InstallLocation" value="${{NvidiaProgramFiles}}\NvHCI"/>
+	</properties>
+	<manifest>
+		<file name="NvvHCI.nvi"/>
+		<file name="nvvhci64.sys"/>
+		<file name="nvvhci32.sys"/>
+		<file name="nvvhci.cat"/>
+		<file name="nvvhci.inf"/>
+	</manifest>
+	<phases>
+		<device phase="removeUsbDriver" action="removePhantoms" when="install">
+			<inf name="nvvHCI.inf"/>
+		</device>
+		<device phase="installUsbDriver" action="create" fixedProgress="10" deviceProgress="35" autoTick="200">
+			<inf name="nvvHCI.inf"/>
+			<hwid name="root\nvvhci"/>
+		</device>
+	</phases>
+</nvi>

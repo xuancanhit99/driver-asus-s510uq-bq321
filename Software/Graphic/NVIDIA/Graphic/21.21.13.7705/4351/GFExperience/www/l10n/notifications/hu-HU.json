@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "Új jutalmak",
+    "l10n.noNewRewards": "Nincsenek új jutalmak",
+    "l10n.friendRequests": "Ismerősök felkérései",
+    "l10n.newFriendRequests": "Ismerősök új felkérései",
+    "l10n.noNewFriendRequests": "Nincsenek új felkérések ismerősöktől",
+    "l10n.noNotifications": "Úgy tűnik, még nincs semmilyen értesítése",
+    "l10n.errorLoadingNotifications": "Hiba történt az értesítések betöltése során. Próbálja újra később",
+    "l10n.clickToRedeemWithGfe": "Kattintson a GeForce Experience beváltásával.",
+    "l10n.youHaveNewReward": "Önnek {{count}} új tétel áll beváltásra",
+    "l10n.clickToInstallWithGfe": "A GeForce Experience telepítéséhez kattintson.",
+    "l10n.gameReadyDriverIsAvailable": "A játékképes illesztőprogram rendelkezésre áll"
+}

@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "Yeni Ödüller",
+    "l10n.noNewRewards": "Yeni Ödül Yok",
+    "l10n.friendRequests": "Arkadaşlık İstekleri",
+    "l10n.newFriendRequests": "Yeni Arkadaşlık İstekleri",
+    "l10n.noNewFriendRequests": "Yeni Arkadaşlık İsteği Yok",
+    "l10n.noNotifications": "Henüz hiçbir bildiriminiz yokmuş gibi görünüyor",
+    "l10n.errorLoadingNotifications": "Bildirimler yüklenirken bir hata oluştu. Daha sonra tekrar deneyin",
+    "l10n.clickToRedeemWithGfe": "GeForce Experience'den yararlanmak için tıklayın.",
+    "l10n.youHaveNewReward": "Kullanmak için {{count}} yeni öğeniz var",
+    "l10n.clickToInstallWithGfe": "GeForce Experience ile kurmak için tıklayın.",
+    "l10n.gameReadyDriverIsAvailable": "Game Ready Sürücü kullanılabilir"
+}

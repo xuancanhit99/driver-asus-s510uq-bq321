@@ -1,0 +1,46 @@
+{
+"identifier":"oem",
+"logo":"oem_assets/logo.png",
+"themeColor":"#222D5A",
+"pages":[
+{
+"layout":"feature",
+"logo":"oem_assets/ISOI_Blue.png",
+"pageName":"First Page",
+"textSide":"left",
+"header":"AUFREGENDER ALLTAGSBEGLEITER",
+"text1":"Hochwertiges Design, perfekte Verarbeitung, umfassende Ausstattung <br>Stylisches Gehäuse passend zu Ihrem Geschmack.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-1.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ISOI_Blue.png",
+"pageName":"Second Page",
+"textSide":"left",
+"header":"ERHÖHTER BEDIENKOMFORT ",
+"text1":"ASUS IceCool-Technologie für eine angenehm kühle Handballenauflage.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-2.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ISOI_Blue.png",
+"pageName":"Third Page",
+"textSide":"left",
+"header":"SonicMaster-TECHNOLOGIE",
+"text1":"Klarer, kraftvoller Klang für Musik, Games und Filme <br>Optimierte Verstärkertechnik für höhere Lautstärke und tiefere Bässe.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-3.png"
+}
+}
+]
+}

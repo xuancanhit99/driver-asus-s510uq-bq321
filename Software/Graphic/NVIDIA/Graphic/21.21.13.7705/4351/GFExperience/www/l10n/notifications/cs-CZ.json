@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "Nové odměny",
+    "l10n.noNewRewards": "Žádné nové odměny",
+    "l10n.friendRequests": "Žádosti kamarádů",
+    "l10n.newFriendRequests": "Nové žádosti kamarádů",
+    "l10n.noNewFriendRequests": "Žádné nové žádosti kamarádů",
+    "l10n.noNotifications": "Vypadá to, že zatím nemáte žádná oznámení",
+    "l10n.errorLoadingNotifications": "Došlo k chybě při načítání oznámení. Zkuste to znovu později",
+    "l10n.clickToRedeemWithGfe": "Kliknutím zde si uplatníte nárok pro GeForce Experience.",
+    "l10n.youHaveNewReward": "Máte {{count}} nových položek k uplatnění",
+    "l10n.clickToInstallWithGfe": "Kliknete zde pro instalaci s GeForce Experience.",
+    "l10n.gameReadyDriverIsAvailable": "Ovladač optimalizovaný pro hry je k dispozici"
+}

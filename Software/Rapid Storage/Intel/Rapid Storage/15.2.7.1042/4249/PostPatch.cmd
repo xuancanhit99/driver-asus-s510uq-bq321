@@ -1,0 +1,1 @@
+if exist C:\Windows\AsHDIVer.txt call ISRTConfiguration\ISRTConfiguration.exe

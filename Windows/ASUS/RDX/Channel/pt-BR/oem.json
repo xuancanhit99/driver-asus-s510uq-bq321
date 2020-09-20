@@ -1,0 +1,46 @@
+{
+"identifier":"oem",
+"logo":"oem_assets/logo.png",
+"themeColor":"#222D5A",
+"pages":[
+{
+"layout":"feature",
+"logo":"oem_assets/ISOI_Blue.png",
+"pageName":"First Page",
+"textSide":"left",
+"header":"Padrões elegantes com várias cores",
+"text1":"Todos os elementos essenciais com um acabamento tátil e uma alta qualidade. <br>Notebook elegante projetado para quem quer se destacar da multidão.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-1.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ISOI_Blue.png",
+"pageName":"Second Page",
+"textSide":"left",
+"header":"Tecnologia IceCool",
+"text1":"A tecnologia ASUS IceCool mantém o apoio para as mãos abaixo da temperatura corporal para uma digitação confortável.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-2.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ISOI_Blue.png",
+"pageName":"Third Page",
+"textSide":"left",
+"header":"Tecnologia SonicMaster",
+"text1":"Som claro e potente com graves ricos e vocais nítidos, projetados pela equipe ASUS Golden Ear. ",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-3.png"
+}
+}
+]
+}

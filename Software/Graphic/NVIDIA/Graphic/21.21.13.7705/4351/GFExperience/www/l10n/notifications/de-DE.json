@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "Neue Prämien",
+    "l10n.noNewRewards": "Keine neue Prämien",
+    "l10n.friendRequests": "Freundschaftsanfragen",
+    "l10n.newFriendRequests": "Neue Freundschaftsanfragen",
+    "l10n.noNewFriendRequests": "Keine neuen Freundschaftsanfragen",
+    "l10n.noNotifications": "Anscheinend haben Sie noch keine Benachrichtigungen.",
+    "l10n.errorLoadingNotifications": "Beim Laden von Benachrichtigungen ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.",
+    "l10n.clickToRedeemWithGfe": "Klicken Sie zum Einlösen mit GeForce Experience.",
+    "l10n.youHaveNewReward": "Sie können {{count}} neue Artikel einlösen",
+    "l10n.clickToInstallWithGfe": "Klicken Sie, um mit GeForce Experience zu installieren.",
+    "l10n.gameReadyDriverIsAvailable": "Game Ready Treiber steht zur Verfügung."
+}

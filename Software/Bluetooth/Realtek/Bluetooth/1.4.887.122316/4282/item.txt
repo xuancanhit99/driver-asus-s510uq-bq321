@@ -1,0 +1,3 @@
+Vendor:Realtek
+Category:Bluetooth
+Module:CB161H

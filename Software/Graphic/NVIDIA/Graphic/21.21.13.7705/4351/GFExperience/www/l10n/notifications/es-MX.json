@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "Nuevas recompensas",
+    "l10n.noNewRewards": "Sin nuevas recompensas",
+    "l10n.friendRequests": "Solicitudes de amistad",
+    "l10n.newFriendRequests": "Nuevas solicitudes de amistad",
+    "l10n.noNewFriendRequests": "Sin nuevas solicitudes de amistad",
+    "l10n.noNotifications": "Al parecer, todavía no tiene notificaciones.",
+    "l10n.errorLoadingNotifications": "Se produjo un error al cargar notificaciones. Intente nuevamente más tarde.",
+    "l10n.clickToRedeemWithGfe": "Haga clic para canjear con GeForce Experience.",
+    "l10n.youHaveNewReward": "Tienes {{count}} artículos para canjear",
+    "l10n.clickToInstallWithGfe": "Haga clic para instalar con GeForce Experience.",
+    "l10n.gameReadyDriverIsAvailable": "El controlador compatible con los juegos está disponible"
+}

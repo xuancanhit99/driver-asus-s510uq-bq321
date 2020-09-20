@@ -1,0 +1,46 @@
+{
+"identifier":"oem",
+"logo":"oem_assets/logo.png",
+"themeColor":"#222D5A",
+"pages":[
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"First Page",
+"textSide":"left",
+"header":"우아한 패턴과 다양한 색상 ",
+"text1":"부드러운 촉감과 고급스러운 품질, 우수한 촉감과 컴퓨팅에 필요한 모든 성능을 갖췄습니다. <br />\n사람들의 시선을 한 몸에 사로잡을 스타일리쉬한 노트북 디자인을 선보입니다.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-1.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"Second Page",
+"textSide":"left",
+"header":"IceCool 기술 ",
+"text1":"ASUS IceCool기술이 팜레스트를 신체 온도보다 낮게 유지시켜 편안한 타이핑 경험을 제공합니다.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-2.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"Third Page",
+"textSide":"left",
+"header":"SonicMaster 기술 ",
+"text1":"ASUS Golden Ear Team이 설계한 깊은 베이스와 날카로운 보컬사운드를 구현합니다. <br />\n선명하고 강력한 사운드 최적화된 앰프가 제공하는 웅장한 볼륨과 더욱 깊어진 베이스 새로운 사운드 환경울 구현합니다.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-3.png"
+}
+}
+]
+}

@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "Νέες επιβραβεύσεις",
+    "l10n.noNewRewards": "Καμία νέα επιβράβευση",
+    "l10n.friendRequests": "Αιτήματα φιλίας",
+    "l10n.newFriendRequests": "Νέα αιτήματα φιλίας",
+    "l10n.noNewFriendRequests": "Δεν υπάρχουν νέα αιτήματα φιλίας",
+    "l10n.noNotifications": "Φαίνεται ότι δεν έχετε ακόμη καμία ειδοποίηση",
+    "l10n.errorLoadingNotifications": "Προέκυψε σφάλμα κατά την φόρτωση ειδοποιήσεων.  Δοκιμάστε ξανά αργότερα.",
+    "l10n.clickToRedeemWithGfe": "Κάντε κλικ για να εξαργυρώσετε με την GeForce Experience.",
+    "l10n.youHaveNewReward": "Έχετε {{count}} νέα στοιχεία για εξαργύρωση",
+    "l10n.clickToInstallWithGfe": "Κάντε κλικ για εγκατάσταση με GeForce Experience.",
+    "l10n.gameReadyDriverIsAvailable": "Το πρόγραμμα οδήγησης Game Ready είναι διαθέσιμο"
+}

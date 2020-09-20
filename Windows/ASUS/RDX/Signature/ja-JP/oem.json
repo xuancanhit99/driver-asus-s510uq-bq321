@@ -1,0 +1,46 @@
+{
+"identifier":"oem",
+"logo":"oem_assets/logo.png",
+"themeColor":"#222D5A",
+"pages":[
+{
+"layout":"feature",
+"logo":"oem_assets/ISOI_Blue.png",
+"pageName":"First Page",
+"textSide":"left",
+"header":"充実の機能と上質なデザインで",
+"text1":"スタンダードを次のレベルへ。 手触りが良く、高い品質、プレミアム感を感じさせる毎日の最高のパートナー。 目をひくスタイリッシュなデザイン。",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-1.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ISOI_Blue.png",
+"pageName":"Second Page",
+"textSide":"left",
+"header":"ASUS IceCool Design",
+"text1":"長時間でも快適に作業 パームレストは、長時間使用しても熱くならないASUS独自の「ASUS IceCool Design」により、長時間の使用でも快適。",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-2.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ISOI_Blue.png",
+"pageName":"Third Page",
+"textSide":"left",
+"header":"ASUS SonicMaster",
+"text1":"高品位なサウンドを楽しむ 臨場感あふれるクリアでパワフルなサウンドを実現する「ASUS SonicMaster」。 サウンドの専門集団であるASUS Golden Earチームより、最適化された極上のサウンドを提供。",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-3.png"
+}
+}
+]
+}

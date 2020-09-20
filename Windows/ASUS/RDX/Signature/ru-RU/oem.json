@@ -1,0 +1,46 @@
+{
+"identifier":"oem",
+"logo":"oem_assets/logo.png",
+"themeColor":"#222D5A",
+"pages":[
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"First Page",
+"textSide":"left",
+"header":"Элегантный корпус в различных цветовых вариантах ",
+"text1":"Базовая функциональность в полном объеме и высокое качество изготовления ",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-1.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"Second Page",
+"textSide":"left",
+"header":"Технология IceCool ",
+"text1":"Верхняя часть корпуса всегда остается комфортно прохладной",
+"legalText":"lorem ipsum",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-2.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"Third Page",
+"textSide":"left",
+"header":"Аудиотехнология SonicMaster",
+"text1":"Чистый и мощный звук с четкой проработкой всего диапазона частот <br>Оптимизированный усилитель для впечатляющих басов",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-3.png"
+}
+}
+]
+}

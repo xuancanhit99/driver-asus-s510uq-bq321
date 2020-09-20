@@ -1,0 +1,46 @@
+{
+"identifier":"oem",
+"logo":"oem_assets/logo.png",
+"themeColor":"#222D5A",
+"pages":[
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"First Page",
+"textSide":"left",
+"header":"Елегантний корпус з декількома варіантами кольорів",
+"text1":"Відчуйте справжню довершеність, доторкнувшись до стильного корпусу з оригінальною обробкою. ",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-1.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"Second Page",
+"textSide":"left",
+"header":"Технологія IceCool",
+"text1":"Технологія ASUS IceCool забезпечує комфортну температуру робочої поверхні ноутбука.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-2.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"Third Page",
+"textSide":"left",
+"header":"Технологія ASUS SonicMaster",
+"text1":"Насолоджуйтесь потужним звучанням з чудовими басами та чітким вокалом, завдяки високоякісній аудіосистемі, розробленій командою ASUS Golden Ear",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-3.png"
+}
+}
+]
+}

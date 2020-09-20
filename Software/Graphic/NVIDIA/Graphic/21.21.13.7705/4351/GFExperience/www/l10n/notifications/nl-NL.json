@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "Nieuwe beloningen",
+    "l10n.noNewRewards": "Geen nieuwe beloningen",
+    "l10n.friendRequests": "Vriendschapsverzoeken",
+    "l10n.newFriendRequests": "Nieuwe vriendschapsverzoeken",
+    "l10n.noNewFriendRequests": "Geen nieuwe vriendschapsverzoeken",
+    "l10n.noNotifications": "Het lijkt erop dat je nog geen notificaties ontvangt.",
+    "l10n.errorLoadingNotifications": "Er ging iets fout met het laden van notificaties. Probeer het later nog eens.",
+    "l10n.clickToRedeemWithGfe": "Klik om in te wisselen met GeForce Experience.",
+    "l10n.youHaveNewReward": "Je hebt {{count}} nieuwe items om te verzilveren",
+    "l10n.clickToInstallWithGfe": "Klik om te installeren met GeForce Experience.",
+    "l10n.gameReadyDriverIsAvailable": "Game Ready-stuurprogramma is beschikbaar"
+}

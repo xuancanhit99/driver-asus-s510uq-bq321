@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "Nové odmeny",
+    "l10n.noNewRewards": "Žiadne nové odmeny",
+    "l10n.friendRequests": "Žiadosti o priateľstvo",
+    "l10n.newFriendRequests": "Nové žiadosti o priateľstvo",
+    "l10n.noNewFriendRequests": "Žiadne nové žiadosti o priateľstvo",
+    "l10n.noNotifications": "Vyzerá to, že zatiaľ nemáte žiadne oznámenia",
+    "l10n.errorLoadingNotifications": "Došlo k chybe pri načítaní oznámenia. Skúste to znova neskôr",
+    "l10n.clickToRedeemWithGfe": "Kliknutím tu si uplatníte nárok pre GeForce Experience.",
+    "l10n.youHaveNewReward": "Máte {{count}} nových položiek pre uplatnenie",
+    "l10n.clickToInstallWithGfe": "Kliknutím analyzujte svoj počítač pomocou grafického procesora GeForce Experience.",
+    "l10n.gameReadyDriverIsAvailable": "Ovládač Game Ready je k dispozícii"
+}

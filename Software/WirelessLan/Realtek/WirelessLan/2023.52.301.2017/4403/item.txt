@@ -1,0 +1,3 @@
+Vendor:Realtek
+Category:WirelessLan
+Module:CB161H

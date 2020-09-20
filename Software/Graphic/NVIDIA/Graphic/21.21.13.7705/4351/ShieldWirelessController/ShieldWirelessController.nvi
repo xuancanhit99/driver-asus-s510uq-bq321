@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nvi name="ShieldWirelessController" title="${{title}}" version="3.4.0.70" versionText="3.4.0.70" timestamp="2017-02-23T08:32:13" disposition="default" hidden="true" installerMin="2.1002.244.2070" hasDriver="true">
+	<strings>
+		<string name="title" value="SHIELD Wireless Controller Driver"/>
+		<string name="SWCInfName" value="nvswcfilter.inf"/>
+		<string name="deviceHandlerDllName" value="ShieldWirelessControllerPlugin"/>
+		<string name="deviceUtilityDllName" value="NvDeviceUtility"/>
+		<string name="InstallFolder" value="${{NvidiaProgramFiles}}\NvContainer"/>
+		<string name="InstallFolderX86" value="${{NvidiaProgramFilesX86}}\NvContainer"/>
+		<string name="PluginFolder" value="${{InstallFolder}}\plugins\LocalSystem"/>
+		<string name="PluginFolderx86" value="${{InstallFolderX86}}\plugins\LocalSystem"/>
+		<string name="ContainerPluginFolderName" value="${{NvidiaProgramFilesX86}}\NvContainer\plugins\User"/>
+		<string name="NvContainerLSName" value="NvContainerLocalSystem"/>
+		<string name="NvContainerNSName" value="NvContainerNetworkService"/>
+		<string name="ContainerBinaryName" value="nvcontainer.exe"/>
+		<string name="RegistryKey" value="${{NvidiaSoftwareKey}}\NvContainer\NvContainerLocalSystem"/>
+		<string name="serviceStopMaxTimeout" value="30000"/>
+		<string name="GFEServiceInstallLocation" value="${{NvidiaProgramFiles}}\GeForce Experience Service"/>
+		<string name="InstallLocation" value="${{NvidiaProgramFiles}}\SHIELD Wireless Controller"/>
+		<string name="serviceName" value="GfExperienceService"/>
+		<string name="serviceBinaryName" value="nvwirelesscontroller"/>
+		<string name="JunctionPointName" value="SWCPlugin"/>
+		<string name="pluginDeleteMaxTimeout" value="10000"/>
+	</strings>
+	<interfaces>
+	</interfaces>
+	<dependencies>
+		<package type="requires" package="Display.GFExperience"/>
+		<package type="requires" package="GFExperience.NvStreamSrv"/>
+		<package type="before" package="Display.GFExperience"/>
+		<package type="after" package="GFExperience.NvStreamSrv"/>
+	</dependencies>
+	<description/>
+	<constraints>
+		<os min="6.0" level="silent"/>
+	</constraints>
+	<extensions>
+	</extensions>
+	<properties>
+		<bool name="IsGFExperienceComponent" value="true"/>
+		<bool name="UsesNvContainer" value="true"/>
+	</properties>
+	<manifest>
+		<file name="${{deviceUtilityDllName}}32.dll"/>
+		<file name="${{deviceUtilityDllName}}64.dll"/>
+		<file name="${{deviceHandlerDllName}}32.dll"/>
+		<file name="${{deviceHandlerDllName}}64.dll"/>
+		<file name="swc_xmega.xmg"/>
+		<file name="swc_csr.ota"/>
+		<file name="ShieldWirelessController.nvi"/>
+		<file name="nvswcfilter.inf"/><file name="nvswcfilter.cat"/><file name="nvswcfilter64.sys"/><file name="WdfCoInstaller0100964.dll"/><file name="nvswcfilter32.sys"/><file name="WdfCoInstaller0100932.dll"/></manifest>
+	<phases>
+		<standard phase="StopOldServiceWithInstallerNotification" when="install" onError="ignore">
+			<controlService name="${{serviceName}}" command="128"/>
+		</standard>
+		<standard phase="WaitForOldServiceStop" when="install" onError="ignore">
+			<waitForService name="${{serviceName}}" state="1" timeOut="20000"/>
+		</standard>
+		<standard phase="DeleteOldService" when="install" onError="ignore">
+			<deleteService name="${{serviceName}}"/>
+			<deleteFile target="${{GFEServiceInstallLocation}}\${{serviceName}}.exe"/>
+			<deleteFile target="${{GFEServiceInstallLocation}}\${{serviceBinaryName}}.exe"/>
+			<deleteFile target="${{GFEServiceInstallLocation}}\ShieldWirelessController.dll"/>
+		</standard>
+		<standard phase="copy32BitFiles" platform="x86">
+			<copyFile target="${{InstallLocation}}\${{deviceUtilityDllName}}.dll" source="${{deviceUtilityDllName}}32.dll"/>
+		</standard>
+		<standard phase="copy64BitFiles" platform="amd64">
+			<copyFile target="${{InstallLocation}}\${{deviceUtilityDllName}}.dll" source="${{deviceUtilityDllName}}64.dll"/>
+		</standard>
+		<standard phase="deleteOldShieldControllerPlugin" when="install">
+			<if filter="32BitPackage">
+				<deleteFile target="${{PluginFolderx86}}\${{deviceHandlerDllName}}.dll"/>
+				<else>
+					<deleteFile target="${{PluginFolder}}\${{deviceHandlerDllName}}.dll"/>
+				</else>
+			</if>
+		</standard>
+		<standard phase="copyShieldControllerPlugin" when="install">
+			<if filter="32BitPackage">
+				<copyFile target="${{InstallLocation}}\${{JunctionPointName}}\${{deviceHandlerDllName}}.dll" source="${{deviceHandlerDllName}}32.dll"/>
+				<else>
+					<copyFile target="${{InstallLocation}}\${{JunctionPointName}}\${{deviceHandlerDllName}}.dll" source="${{deviceHandlerDllName}}64.dll"/>
+				</else>
+			</if>
+		</standard>
+		<standard phase="deleteSWCPlugin" when="uninstall">
+			<deleteDirectoryTree target="${{InstallLocation}}\${{JunctionPointName}}" waitForUnlock="${{pluginDeleteMaxTimeout}}"/>
+		</standard>
+		<standard phase="createJunctionPoint">
+			<if filter="32BitPackage">
+				<createDirectory target="${{PluginFolderx86}}\${{JunctionPointName}}" source="${{InstallLocation}}\${{JunctionPointName}}" symLink="true"/>
+				<else>
+					<createDirectory target="${{PluginFolder}}\${{JunctionPointName}}" source="${{InstallLocation}}\${{JunctionPointName}}" symLink="true"/>
+				</else>
+			</if>
+		</standard>
+		<standard phase="copyFirmwareFiles">
+			<copyFile target="${{InstallLocation}}\swc_xmega.xmg" source="swc_xmega.xmg"/>
+			<copyFile target="${{InstallLocation}}\swc_csr.ota" source="swc_csr.ota"/>
+		</standard>
+		<device phase="removePhantomSWCDevices" action="removePhantoms" when="install">
+			<inf name="${{SWCInfName}}"/>
+		</device>
+		<device phase="installSWCDriver" fixedProgress="10" deviceProgress="75" autoTick="200">
+			<inf name="${{SWCInfName}}"/>
+		</device>
+	</phases>
+	<include name="${{InstallerDllDirectory}}\GFExperienceProgressText.cfg" select="/nvi/*"/>
+</nvi>

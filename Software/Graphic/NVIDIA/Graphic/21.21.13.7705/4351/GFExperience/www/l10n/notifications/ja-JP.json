@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "新しい報酬",
+    "l10n.noNewRewards": "新しい報酬はありません",
+    "l10n.friendRequests": "友達リクエスト",
+    "l10n.newFriendRequests": "新しい友達リクエスト",
+    "l10n.noNewFriendRequests": "新しい友達リクエストはありません",
+    "l10n.noNotifications": "通知がまだないようです",
+    "l10n.errorLoadingNotifications": "通知の読み込み中にエラーが発生しました。しばらくしてからもう一度お試しください",
+    "l10n.clickToRedeemWithGfe": "GeForce Experience を使用して換金するには、ここをクリックしてください。",
+    "l10n.youHaveNewReward": "換金できる新しいアイテムが {{count}} 個あります。",
+    "l10n.clickToInstallWithGfe": "クリックすると GeForce Experience と共にインストールを開始します。",
+    "l10n.gameReadyDriverIsAvailable": "Game Ready ドライバーを入手可能"
+}

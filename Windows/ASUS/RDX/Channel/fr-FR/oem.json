@@ -1,0 +1,46 @@
+{
+"identifier":"oem",
+"logo":"oem_assets/logo.png",
+"themeColor":"#222D5A",
+"pages":[
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"First Page",
+"textSide":"left",
+"header":"Des motifs élégants et colorés",
+"text1":"Tout le nécessaire, avec une finition agréable au toucher et une sensation de grande qualité. Ordinateur portable élégant, conçu pour ceux qui veulent sortir du lot.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-2.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"Second Page",
+"textSide":"left",
+"header":"Technologie IceCool ",
+"text1":"Technologie ASUS IceCool pour maintenir vos poignets à une température inférieure à celle du corps pour un confort amélioré.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-3.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ASUS logo blue.png",
+"pageName":"Third Page",
+"textSide":"left",
+"header":"Technologie SonicMaster",
+"text1":"Un son clair et puissant, des basses riches, élaboré par l'équipe ASUS Golden Ear.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-4.png"
+}
+}
+]
+}

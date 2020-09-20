@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "신규 보상",
+    "l10n.noNewRewards": "신규 보상 없음",
+    "l10n.friendRequests": "친구 요청",
+    "l10n.newFriendRequests": "새 친구 요청",
+    "l10n.noNewFriendRequests": "새 친구 요청 없음",
+    "l10n.noNotifications": "아직 알림이 수신되지 않은 것 같습니다.",
+    "l10n.errorLoadingNotifications": "알림을 로드하는 중에 오류가 발생했습니다. 나중에 다시 시도하십시오.",
+    "l10n.clickToRedeemWithGfe": "GeForce Experience로 통해 사용하려면 클릭합니다.",
+    "l10n.youHaveNewReward": "상환을 받을 수 있는 {{count}}개의 새로운 아이템이 있습니다.",
+    "l10n.clickToInstallWithGfe": "GeForce Experience를 설치하려면 클릭하십시오.",
+    "l10n.gameReadyDriverIsAvailable": "Game Ready Driver를 사용할 수 있습니다"
+}

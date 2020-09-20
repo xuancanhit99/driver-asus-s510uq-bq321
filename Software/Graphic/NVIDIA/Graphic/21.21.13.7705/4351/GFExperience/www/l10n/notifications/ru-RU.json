@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "Новые награды",
+    "l10n.noNewRewards": "Нет новых наград",
+    "l10n.friendRequests": "Запросы друзей",
+    "l10n.newFriendRequests": "Новые запросы друзей",
+    "l10n.noNewFriendRequests": "Нет новых запросов друзей",
+    "l10n.noNotifications": "Похоже, у вас еще нет уведомлений.",
+    "l10n.errorLoadingNotifications": "Ошибка загрузки уведомлений. Повторите попытку позже",
+    "l10n.clickToRedeemWithGfe": "Нажмите для активации с помощью GeForce Experience.",
+    "l10n.youHaveNewReward": "Доступны новые награды: {{count}}",
+    "l10n.clickToInstallWithGfe": "Нажмите, чтобы установить GeForce Experience.",
+    "l10n.gameReadyDriverIsAvailable": "Доступен драйвер Game Ready"
+}

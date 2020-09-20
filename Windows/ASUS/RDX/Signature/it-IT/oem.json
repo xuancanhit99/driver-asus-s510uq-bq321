@@ -1,0 +1,46 @@
+{
+"identifier":"oem",
+"logo":"oem_assets/logo.png",
+"themeColor":"#222D5A",
+"pages":[
+{
+"layout":"feature",
+"logo":"oem_assets/ISOI_Blue.png",
+"pageName":"First Page",
+"textSide":"left",
+"header":"Eleganti motivi multi-colore",
+"text1":"Tutto l'essenziale in un prodotto di alta qualità. <br>Eleganti notebook creati per coloro che cercano di distinguersi.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-1.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ISOI_Blue.png",
+"pageName":"Second Page",
+"textSide":"left",
+"header":"Tecnologia IceCool",
+"text1":"La tecnologia ASUS IceCool consente di mantenere la temperatura del palm-rest al di sotto di quella corporea per un'esperienza di digitazione confortevole.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-2.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ISOI_Blue.png",
+"pageName":"Third Page",
+"textSide":"left",
+"header":"Tecnologia SonicMaster",
+"text1":"Audio di altissima qualità con suoni bassi profondi e una riproduzione eccezionalmente fedele e cristallina delle frequenze più alte e delle tonalità vocali.",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-3.png"
+}
+}
+]
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nvi name="NvTelemetryContainer" title="${{title}}" version="2.3.16.0" versionText="2.3.16.0" timestamp="2017-02-21T07:04:45" disposition="demand" hidden="true" installerMin="2.1002.215.1898">
+	<strings>
+		<string name="title" value="NVIDIA Telemetry Container"/>
+		<string name="ContainerBinaryName" value="NvTelemetryContainer.exe"/>
+		<string name="ServiceName" value="NvTelemetryContainer"/>
+		<string name="ServiceDisplayName" value="NVIDIA Telemetry Container"/>
+		<string name="crashDumpKey" value="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\LocalDumps"/>
+		<string name="serviceStopMaxTimeout" value="30000"/>
+		<string name="StateTransitionMaxTime" value="30000"/>
+		<string name="LogFilePath" value="${{NvidiaCommonAppData}}\${{ServiceName}}.log"/>
+		<string name="LogLevel" value="3"/>
+		<string name="ContainerRecoveryScript" value="NvTelemetryContainerRecovery.bat"/>
+	</strings>
+	<properties>
+		<bool name="ContainerUnloaded" value="true"/>
+		<bool name="GenerateCrashDumps" value="true"/>
+	</properties>
+	<manifest>
+		<file name="NvTelemetryContainer.nvi"/>
+		<file name="${{ContainerBinaryName}}"/>
+		<file name="${{ContainerRecoveryScript}}"/>
+	</manifest>
+	<phases>
+		<standard phase="stopService" onError="ignore" when="install">
+			<stopService name="${{ServiceName}}" timeOut="${{serviceStopMaxTimeout}}"/>
+		</standard>
+		<exe phase="killContainers" name="${{SystemDirectory}}\taskkill.exe" when="install" onError="ignore">
+			<arg value="/f /im ${{ContainerBinaryName}}" quote="none"/>
+			<success value="0"/>
+			<success value="128"/>
+		</exe>
+		<setPropertyIf phase="checkIfContainerUnloaded" boolProperty="ContainerUnloaded" value="false" when="install">
+			<process name="${{ContainerBinaryName}}" check="exists"/>
+		</setPropertyIf>
+		<confirm phase="Confirm-ContainerUnload" when="install">
+			<propertyTrue name="ContainerUnloaded"/>
+		</confirm>
+		<standard phase="createCrashDumpGenerationKeys" condition="GenerateCrashDumps">
+			<addRegistry keyName="${{crashDumpKey}}\${{ContainerBinaryName}}"/>
+			<addRegistry keyName="${{crashDumpKey}}\${{ContainerBinaryName}}" valueName="DumpFolder" type="REG_EXPAND_SZ" value="%PROGRAMDATA%\NVIDIA Corporation\CrashDumps"/>
+			<addRegistry keyName="${{crashDumpKey}}\${{ContainerBinaryName}}" valueName="DumpCount" type="REG_DWORD" value="15"/>
+			<addRegistry keyName="${{crashDumpKey}}\${{ContainerBinaryName}}" valueName="DumpType" type="REG_DWORD" value="1"/>
+		</standard>
+		<standard phase="copyFiles">
+			<createDirectory target="${{NvidiaProgramFilesX86}}\NvTelemetry"/>
+			<copyFile source="${{ContainerBinaryName}}" target="${{NvidiaProgramFilesX86}}\NvTelemetry\${{ContainerBinaryName}}"/>
+			<copyFile target="${{SharedWindowsDirectory}}\${{ContainerRecoveryScript}}" source="${{ContainerRecoveryScript}}"/>
+		</standard>
+		<standard phase="installService">
+			<createService name="${{ServiceName}}" type="16" target="${{NvidiaProgramFilesX86}}\NvTelemetry\${{ContainerBinaryName}}" argument="-s ${{ServiceName}} -f &quot;${{LogFilePath}}&quot; -l ${{LogLevel}} -d &quot;${{NvidiaProgramFilesX86}}\NvTelemetry\plugin&quot;" displayName="${{title}}" startCode="2" errorControl="0" serviceStartName="NT AUTHORITY\NetworkService" description="Container service for NVIDIA Telemetry"/>
+		</standard>
+		<exe phase="configureRecovery" onError="ignore" when="install" timeout="5000" name="${{SystemDirectory}}\sc.exe" dir="${{SystemDirectory}}">
+			<arg value="failure"/>
+			<arg value="${{ServiceName}}"/>
+			<arg value="reset="/>
+			<arg value="10"/>
+			<arg value="command="/>
+			<arg value="cmd.exe /C %windir%\${{ContainerRecoveryScript}} ${{ServiceName}} %ProgramData%\TelemetryContainerRecovery.log"/>
+			<arg value="actions="/>
+			<arg value="restart/1000/restart/5000/run/10000"/>
+		</exe>
+		<standard phase="startContainer" when="installClose">
+			<startService name="${{ServiceName}}" timeOut="${{StateTransitionMaxTime}}"/>
+		</standard>
+		<standard phase="deleteLog" when="uninstall" onError="ignore">
+			<deleteFile target="${{LogFilePath}}"/>
+			<deleteFile target="${{LogFilePath}}_backup1"/>
+		</standard>
+	</phases>
+</nvi>

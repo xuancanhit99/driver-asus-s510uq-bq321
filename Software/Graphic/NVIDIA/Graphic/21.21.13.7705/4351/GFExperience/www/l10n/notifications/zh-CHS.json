@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "新的奖励",
+    "l10n.noNewRewards": "无新的奖励",
+    "l10n.friendRequests": "好友请求",
+    "l10n.newFriendRequests": "新的好友请求",
+    "l10n.noNewFriendRequests": "无新的好友请求",
+    "l10n.noNotifications": "您似乎尚未收到任何通知",
+    "l10n.errorLoadingNotifications": "加载通知时出错。请稍后再试",
+    "l10n.clickToRedeemWithGfe": "单击以通过 GeForce Experience 进行兑换。",
+    "l10n.youHaveNewReward": "您有 {{count}} 新物品可以兑换",
+    "l10n.clickToInstallWithGfe": "单击以通过 GeForce Experience 进行安装。",
+    "l10n.gameReadyDriverIsAvailable": "Game Ready 驱动程序可用"
+}

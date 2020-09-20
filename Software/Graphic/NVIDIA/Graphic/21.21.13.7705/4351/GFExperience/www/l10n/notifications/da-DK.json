@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "Nye præmier",
+    "l10n.noNewRewards": "Ingen nye præmier",
+    "l10n.friendRequests": "Venneanmodninger",
+    "l10n.newFriendRequests": "Nye venneanmodninger",
+    "l10n.noNewFriendRequests": "Ingen nye venneanmodninger",
+    "l10n.noNotifications": "Det ser ud til du ikke har nogen beskeder endnu",
+    "l10n.errorLoadingNotifications": "Der var en fejl ved indlæsning af beskeder. Prøv igen senere",
+    "l10n.clickToRedeemWithGfe": "Klik for at indløse med GeForce Experience.",
+    "l10n.youHaveNewReward": "Du har {{count}} nye elementer til at indløse",
+    "l10n.clickToInstallWithGfe": "Klik for at installere med GeForce Experience.",
+    "l10n.gameReadyDriverIsAvailable": "Spilleparat driver findes"
+}

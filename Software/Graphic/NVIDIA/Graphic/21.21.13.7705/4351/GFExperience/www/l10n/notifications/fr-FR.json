@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "Nouvelles récompenses",
+    "l10n.noNewRewards": "Pas de nouvelles récompenses",
+    "l10n.friendRequests": "Invitations",
+    "l10n.newFriendRequests": "Nouvelles invitations",
+    "l10n.noNewFriendRequests": "Pas de nouvelles invitations",
+    "l10n.noNotifications": "Apparemment, vous n'avez encore aucune notification.",
+    "l10n.errorLoadingNotifications": "Erreur détectée pendant le chargement des notifications. Réessayez ultérieurement",
+    "l10n.clickToRedeemWithGfe": "Cliquez pour valider votre code sur GeForce Experience.",
+    "l10n.youHaveNewReward": "Vous avez {{count}} nouveaux biens à échanger",
+    "l10n.clickToInstallWithGfe": "Cliquez pour installer avec GeForce Experience.",
+    "l10n.gameReadyDriverIsAvailable": "Pilote Game Ready est disponible"
+}

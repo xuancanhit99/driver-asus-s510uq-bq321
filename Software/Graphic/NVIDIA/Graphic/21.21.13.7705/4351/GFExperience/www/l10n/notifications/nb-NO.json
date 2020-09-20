@@ -1,0 +1,13 @@
+{
+    "l10n.newRewards": "Nye premier",
+    "l10n.noNewRewards": "Ingen nye premier",
+    "l10n.friendRequests": "Venneforespørsler",
+    "l10n.newFriendRequests": "Nye venneforespørsler",
+    "l10n.noNewFriendRequests": "Ingen nye venneforespørsler",
+    "l10n.noNotifications": "Ser ut som du ikke har noen varslinger ennå",
+    "l10n.errorLoadingNotifications": "Det oppsto en feil under lasting av varslinger. Prøv igjen senere",
+    "l10n.clickToRedeemWithGfe": "Klikk for å løse inn med GeForce Experience.",
+    "l10n.youHaveNewReward": "Du har {{count}} nye elementer å innløse",
+    "l10n.clickToInstallWithGfe": "Klikk for å innstallere med GeForce Experience.",
+    "l10n.gameReadyDriverIsAvailable": "Spilleklar driver er tilgjengelig"
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FirstExperience>
+<oobe>
+	<hidSetup>
+		<keyboardImagePath>c:\windows\asus\pairing1.png</keyboardImagePath>
+		<keyboardText>Set up your Fabrikam keyboard. Insert batteries, turn on, and press the Bluetooth button.</keyboardText>
+		<keyboardPINImagePath>c:\windows\asus\pairing2.png</keyboardPINImagePath>
+		<keyboardPINText>Enter PIN and press the Enter key.</keyboardPINText>
+		<keyboardErrorImagePath>c:\windows\asus\pairing3.png</keyboardErrorImagePath>
+		<keyboardErrorText>An error has occurred. Please contact ASUS.</keyboardErrorText>
+	</hidSetup>
+</oobe>

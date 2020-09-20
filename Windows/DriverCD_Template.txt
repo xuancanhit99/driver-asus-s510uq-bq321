@@ -1,0 +1,139 @@
+Date  : 2016-12-23
+Build : V10.00.0019
+Relase Note :
+1. Fix Windows Search issue.(PC becomes sluggish) [\I386\OEM\Refresh.cmd ; Reset.cmd]
+2. Fix OA3 File Path. [I386\AsStageIntegrate.exe(v1.0.0.5)]
+3. Remove Asinst when the process completed. [I386\AsInst.exe(v2.4.0.5);AsInstCommomLibrary.dll;Inst_ClassLibrary.dll]
+--------------------------------------------------
+Date  : 2016-11-16
+Build : V10.00.0018
+Relase Note :
+1. Add education workaround. [I386\SYSPRE*.cmd ; I386\MigConfig.xml]
+2. Remove model name of system Info. [I386\AsStageIntegrate.exe(v1.0.0.4)]
+--------------------------------------------------
+Date  : 2016-10-12
+Build : V10.00.0017
+Relase Note :
+1. BSOD flag of inst.ini is invalid , Update BSOD check function. [I386\AsInst.exe(v2.4.0.4);AsInstCommomLibrary.dll;Inst_ClassLibrary.dll]
+--------------------------------------------------
+Date  : 2016-10-04
+Build : V10.00.0016
+Relase Note :
+1. Fix USMT issue with fontcache [I386\MigConfig.xml]
+2. By DriverCD management system to decide whether to check BSOD (Check by default)[I386\AsInst.exe(v2.4.0.3);AsInstCommomLibrary.dll;Inst_ClassLibrary.dll]
+3. Do not need to delete other wallpapers [I386\AsInst.exe(v2.4.0.3);AsInstCommomLibrary.dll;Inst_ClassLibrary.dll]
+--------------------------------------------------
+Date  : 2016-09-01
+Build : V10.00.0015
+Relase Note :
+1. Check Device Status [I386\SYSPREP*.cmd ; ChkDevice.cmd]
+2. Check BSOD [I386\AsInst.exe(v2.4.0.2);AsInstCommomLibrary.dll;Inst_ClassLibrary.dll]
+--------------------------------------------------
+Date  : 2016-07-13
+Build : V10.00.0014
+Relase Note :
+1. Remove check logo function
+2. By pass the beta driver only on /pr [I386\AsInst.exe(v2.4.0.1);AsInstCommomLibrary.dll;Inst_ClassLibrary.dll]
+3. Modify LMXmlPath for PBR [I386\OEM\Reset.cmd ; Refresh.cmd]
+4. Set DeviceForm Code for DT/AIO on MS Signature Image [I386\AsSetUnattend.exe]
+--------------------------------------------------
+Date  : 2016-03-31
+Build : V10.00.0013
+Relase Note :
+1. String of new OOBEPage is too long (>256) and cause the program fail , Update AsInsXml.exe [I386\AsInsXml.exe(v1.0.0.2)]
+2. Try to close crash window to patch USMT Stop working issue [I386\TestWHQL.exe(v6.0.0.4)]
+--------------------------------------------------
+Date  : 2016-03-17
+Build : V10.00.0012
+Relase Note :
+1. Support TrustID by Model , Add parameter /deviceform & /trustedimageidentifier  [I386\SpecialProc.cmd , I386\SYSPRE*.cmd , I386\AsSetUnattend.exe]
+2. Fix LanguageGroup Detection issue for RDVD [I386\AsInst.exe(v2.4.0.0);AsInstCommomLibrary.dll;Inst_ClassLibrary.dll]
+3. Fix crash issue with memory and support on/off device command and new hardware support [I386\AsTouchPanel\AsPatchTouchPanel*.*]
+4. Try to close crash window to patch USMT Stop working issue [I386\TestWHQL.exe]
+--------------------------------------------------
+Date  : 2016-01-18
+Build : V10.00.0011
+Relase Note :
+1. Change ";" to "," for IgnoreList. [I386\AsInst.exe(v2.3.0.0);AsInstCommomLibrary.dll;Inst_ClassLibrary.dll]
+2. Add USMT Check/Retry rule. [I386\Sysprep*.Cmd , I386\USMT.cmd]
+3. Support DPTF Config File  [I386\SysPAT*.Cmd , I386\ASUSConfig.cmd , Windows\ASUS\DPTF]
+--------------------------------------------------
+Date  : 2015-11-09
+Build : V10.00.0010
+Relase Note :
+1. Fix version compare for StoreApp. [I386\AsInst.exe(v2.2.0.0);AsInstCommomLibrary.dll;Inst_ClassLibrary.dll]
+2. Fix AMD control center issue during PBR. [MigConfig.xml]
+--------------------------------------------------
+Date  : 2015-10-28
+Build : V10.00.0009
+Relase Note :
+1. Add HWID [I386\AsTouchPanel\AsPatchTouchPanel.ini]
+2. Update timeout 600 minutes for USMT [I386\Inst.ini]
+3. Fix space issue when the main process read ignore list and compare [I386\AsInst.exe(v2.1.0.0);AsInstCommomLibrary.dll;IgnoreProcess.txt;Inst_ClassLibrary.dll]
+4. Support SmartPin [AsSmartPin.exe from HDI]
+5. ** Phase Out Winsat **
+--------------------------------------------------
+Date  : 2015-10-01
+Build : V10.00.0008
+Relase Note :
+1. Hidden folder under C drive [I386\OEM\Reset.cmd]
+2. Hidden folder under C drive [I386\OEM\Refresh.cmd]
+(1&2 Only happend on OS is disk1)
+3. Fix eSupport issue on MS Case [I386\AsInst.exe]
+4. Update Ignore Process List [I386\IgnoreProcess.txt]
+--------------------------------------------------
+Date  : 2015-09-08
+Build : V10.00.0007
+Relase Note :
+1.Fix PBR issue : Incorrect system locale is set after using refresh your PC [I386\WRConfig.xml]
+2.Fix PBR issue : Push-button reset fails during the "Installing Windows" phase [I386\WRConfig.xml]
+(Note. PBR document from v1.6 , Implement 9.1.3 & 9.1.4)
+3.Add Entry point to Support RDVD process [I386\Sysprep*.Cmd]
+--------------------------------------------------
+Date  : 2015-08-24
+Build : V10.00.0006
+Relase Note :
+1. Add registry key to support PBR backup solution[I386\MigConfig.xml]
+--------------------------------------------------
+Date  : 2015-08-11
+Build : V10.00.0005
+Relase Note : 
+1. Add Assembly version in Inst.log [I386\AsInst.exe]
+2. By rule to delete folder [I386\AsInst.exe]
+   When -Hotfix -HWID -MoreCheckIfRun -AsCheckExist -HDIGroup -FactoryOnly
+3. [All Case] Delete eSupport\eDriver\I386 , eSupport\eDriver\Windows [I386\AsInst.exe]
+4. [MS Case] Delete eSupport\eDriver [I386\AsInst.exe]
+5. Create InstallWiz shortcut in All Apps , Except Signature[I386\AsInst.exe]
+6. Remove fix Via audio bug [I386\AsInst.exe]
+7. Remove AutoLogon Key [I386\AsInst.exe]
+8. Remvoe AsChkDev.exe [I386\AsInst.exe]
+9. Update Script [I386\SpecialProc.cmd]
+--------------------------------------------------
+Date  : 2015-08-05
+Build : V10.00.0004
+Relase Note : 
+1. Update Win10 RTM Check Logo Tool (Fix 64bit Output Log Issue)
+2. Dynamic to set DeviceForm value from Unattend [Update I386\AsSetUnattend.exe]
+3. Remove eDriver if it's Signature Image
+4. Remove InstallWiz ShortCut if it's Signature Image
+--------------------------------------------------
+Date  : 2015-07-30
+Build : V10.00.0003
+Relase Note : 
+1. Hidden folder under C drive [I386\OEM\Reset.cmd]
+2. Hidden folder under C drive [I386\OEM\Refresh.cmd]
+3. Create InstallWiz shortcut in All Apps [I386\AsInst.exe]
+4. New hotfix rule to detect ServicePackName [Windows\Log\OSInfo.ini]
+5. Check if the hotfix had been installed before item executed [I386\AsInst.exe]
+6. Add Metro app version compare rule [I386\AsInst.exe]
+7. Delete Korea shortcut from All Apps
+--------------------------------------------------
+Date  : 2015-07-21
+Build : V10.00.0002
+Relase Note : 
+1. Fix BBY Bug [Sysprep*.Cmd]
+--------------------------------------------------
+Date  : 2015-07-20
+Build : V10.00.0001
+Relase Note : 
+1. First Release

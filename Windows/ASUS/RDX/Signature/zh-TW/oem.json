@@ -1,0 +1,46 @@
+{
+"identifier":"oem",
+"logo":"oem_assets/logo.png",
+"themeColor":"#222D5A",
+"pages":[
+{
+"layout":"feature",
+"logo":"oem_assets/ISOI_Blue.png",
+"pageName":"First Page",
+"textSide":"left",
+"header":"優雅圖騰的多彩系列",
+"text1":"搭載全方位運算功能，更具備細緻外觀及非凡質感。 時尚的外型設計，展現自我風格，成為注目焦點。",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-1.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ISOI_Blue.png",
+"pageName":"Second Page",
+"textSide":"right",
+"header":"智能散熱系統",
+"text1":"華碩獨家的IceCool技術，置腕區保持舒爽溫度，提供更加舒適打字體驗",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-2.png"
+}
+},
+{
+"layout":"feature",
+"logo":"oem_assets/ISOI_Blue.png",
+"pageName":"Third Page",
+"textSide":"left",
+"header":"獨家技術SonicMaster",
+"text1":"由華碩金耳朵團隊設計的獨家技術SonicMaster清晰而有力的聲音。 大尺寸喇叭與共鳴室可提供強力音訊輸出與深沈低音，豐富的低音和清晰的人聲，聆聽無與倫比的音訊。",
+"legalText":"",
+"media":{
+"blockType":"img",
+"src":"oem_assets/X-3.png"
+}
+}
+]
+}
